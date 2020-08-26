@@ -2,8 +2,9 @@
 #include <cassert>
 
 
-//Rectangle::Rectangle(double l, double h) : hauteur_(h), largeur_(l)
-//{}
+Rectangle::Rectangle(double h, double L)
+    : hauteur_(h), largeur_(L)
+{}
 
 double Rectangle::surface() const
 {

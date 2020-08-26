@@ -9,7 +9,7 @@
 class Rectangle {
  public:
     // Constructor
-    //Rectangle(double, double);
+    Rectangle(double, double);
     
     // prototypes des methodes
     double surface() const;

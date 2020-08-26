@@ -5,10 +5,8 @@ using namespace std;
 
 int main()
 {
-    Rectangle rect;
+    Rectangle rect(3.0, 4.0);
 
-    rect.largeur(3.0);
-    rect.hauteur(4.0);
     cout << "Surface : "
 	 << rect.surface()
 	 << endl;
