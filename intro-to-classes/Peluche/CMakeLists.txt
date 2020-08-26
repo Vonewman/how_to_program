@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.13.4)
 project(directory_test)
  
-#Bring the headers, such as Student.h into the project
+#Bring the headers, such as Peluche.h into the project
 include_directories(include)
  
 #Can manually add the sources using the set command as follows:

@@ -10,6 +10,8 @@ class Peluche {
     double prix;
 
  public:
+    Peluche(Peluche const& p);
+    Peluche(std::string, std::string, double);
     std::string getEspece() const;
     std::string getNom() const;
     double getPrix() const;

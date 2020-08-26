@@ -1,0 +1,1 @@
+/usr/bin/c++     CMakeFiles/rect.dir/src/Rectangle.cpp.o CMakeFiles/rect.dir/src/main.cpp.o  -o rect 

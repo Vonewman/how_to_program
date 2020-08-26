@@ -1,0 +1,18 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../include/Peluche.h
+string
+-
+
+/home/geek/how_to_program/intro-to-classes/Peluche/src/main.cpp
+iostream
+-
+Peluche.h
+/home/geek/how_to_program/intro-to-classes/Peluche/src/Peluche.h
+

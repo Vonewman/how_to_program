@@ -1,0 +1,3 @@
+/home/geek/how_to_program/intro-to-classes/Rectangle/build/CMakeFiles/rebuild_cache.dir
+/home/geek/how_to_program/intro-to-classes/Rectangle/build/CMakeFiles/rect.dir
+/home/geek/how_to_program/intro-to-classes/Rectangle/build/CMakeFiles/edit_cache.dir
