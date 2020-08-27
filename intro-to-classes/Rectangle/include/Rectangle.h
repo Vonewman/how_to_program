@@ -24,6 +24,7 @@ class Rectangle {
  private:
     // declarations des attributs
     double largeur_, hauteur_;
+    static int compteur;
 };
 
 
