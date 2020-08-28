@@ -1,3 +1,12 @@
+/* Construire une classe Patient
+ * qui permets de calculer l'IMC
+ * pour Indice de Masse Musculaire
+ *
+ *
+ * */
+
+
+
 #include <iostream>
 using namespace std;
 
