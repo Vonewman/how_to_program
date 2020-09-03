@@ -5,63 +5,87 @@ using namespace std;
  * Complétez le programme à partir d'ici.
  *******************************************/
 
+
 class Tirelire {
-public:
-    double getMontant() const {
-	return montant;
-    }
-
-    void afficher() const {
-	if (montant == 0) {
-	    cout << "Vous etes sans le sou.";
-	} else {
-	    cout << "Vous avez " << montant << "euros dans votre tirelire";
-	}
-    }
-    
-    void secouer() const {
-	if (montant == 0)
-	    cout << endl;
-	else
-	    cout << "Bing bing" << "\n";
-    }
-
-    void remplir(double montant_donnee) {
-	if (montant_donnee >= 0) {
-	    montant = montant_donnee;
-	}
-    }
-
-    void vider() {
-	montant = 0;
-    }
-
-    void puiser(double montant_pris) {
-	if (montant_pris < 0) {
-	    cout << endl;
-	} else if (montant_pris > montant){
-	    montant = 0;
-	} else {
-	    montant = montant_pris;
-	}
-    }
-
-    bool montant_suffisant(double budget, double solde) {
-	solde = montant - budget;
-	if (budget <= 0) {
-	    return true;
-	    solde = montant;
-	} else {
-	    return true;
-	}
-    }
-
-    double calculerSolde(double budget_depenser) {
-	return montant - budget_depenser;
-    }
-private:
-    double montant;
+	private:
+		double montant;
+	public:
+		double getMontant() { return montant; }
+		void afficher();
+		void secouer();
+		void remplir(double a);
+		void vider() { montant = 0; }
+		void puiser(double a);
+		bool montant_suffisant(double spending, double &remainder);
 };
+
+void Tirelire::afficher()
+{
+	if (montant == 0)
+	{
+		cout << "Vous etes sans le sou.\n";
+	} 
+	else
+	{
+		cout << "Vous avez : " << montant << " euros dans votre tirelire.\n";
+	}	
+}
+
+void Tirelire::remplir(double a)
+{
+	if (a > 0)
+	{
+		montant += a;
+	}
+}
+
+void Tirelire::puiser(double a)
+{
+	if (a < 0)
+	{
+		// do nothing
+	}
+
+	if (a > montant)
+	{
+		montant = 0;
+	}
+	else
+	{
+		montant -= a;
+	}
+}
+
+void Tirelire::secouer()
+{
+	if (montant > 0)
+	{
+		cout << "Bing bing\n";
+	}
+}
+
+bool Tirelire::montant_suffisant(double spending, double &remainder)
+{
+	if (spending > montant)
+	{
+		double base;
+		if (montant < 0)
+		{
+			base = 0;
+		}
+		else 
+		{
+			base = montant;
+		}
+		remainder = spending - base;
+		return false;
+	}
+	else 
+	{
+		remainder = montant - spending;
+		return true;
+	}
+}
 
 /*******************************************
  * Ne rien modifier après cette ligne.
