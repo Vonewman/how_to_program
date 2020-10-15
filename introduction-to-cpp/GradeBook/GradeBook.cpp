@@ -11,6 +11,7 @@ using namespace std;
 GradeBook::GradeBook(string name)
 {
 	setCourseName(name);
+	maximumGrade = 0; // This value will be replaced by the maximum grade
 }
 
 // function to set the course name
@@ -34,8 +35,8 @@ string GradeBook::getCourseName()
 // display a welcome message to the GradeBook user
 void GradeBook::displayMessage()
 {
-	cout << "Welcome to the grade book for \n" << getCourseName()
-		<< "!" << endl;
+	cout << "Welcome to the grade book for \n" << getCourseName() << "!\n" 
+		<< endl;
 }
 
 // determine class average based on 10 grades entered by user
@@ -84,3 +85,43 @@ void GradeBook::determineClassAverage()
 		cout << "No grades were entered " << endl;
 	}
 }
+
+// input three grades fromuser; determine maximum
+void GradeBook::inputGrades()
+{
+	int grade1;  // first grade entered by user
+	int grade2;  // second grade entered by user
+	int grade3; // third grade entered by user
+
+	cout << "Enter three integer grades: ";
+	cin >> grade1 >> grade2 >> grade3;
+
+	// store maximum in number maximumGrade
+	maximumGrade = maximum(grade1, grade2, grade3);
+}
+
+
+// returns the maximum of its three integer parameters
+int GradeBook::maximum(int x, int y, int z)
+{
+	int maximumValue = x;  // assumes x is the largest of start
+
+	// determine whether y is greater than maximumValue
+	if (y > maximumValue)
+		maximumValue = y;  // make y the new maximumValue
+
+	// determine whether z is greater than maximumValue
+	if (z > maximumValue)
+		maximumValue = z; // make z the new maximumValue
+
+	return maximumValue;
+}
+
+
+// display a report based on the grades entered by user
+void GradeBook::displayGradeReport()
+{
+	// output maximum of grades entered 
+	cout << "Maximum of grades entered: " << maximumGrade << endl;
+}
+

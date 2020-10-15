@@ -9,7 +9,7 @@ int main()
 	GradeBook myGradeBook("CS101 C++ Programming");
 
 	myGradeBook.displayMessage(); // display welcome message
-	myGradeBook.determineClassAverage(); // find average of 10 grades
-
+	myGradeBook.inputGrades(); // read grades from user
+	myGradeBook.displayGradeReport(); // display report based on grades
 	return 0;
 }
