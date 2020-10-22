@@ -1,0 +1,3 @@
+/home/geek/how_to_program/Classes/Time/CMakeFiles/rebuild_cache.dir
+/home/geek/how_to_program/Classes/Time/CMakeFiles/time.dir
+/home/geek/how_to_program/Classes/Time/CMakeFiles/edit_cache.dir

@@ -1,0 +1,24 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/geek/how_to_program/Classes/Time/Time.cpp
+iostream
+-
+iomanip
+-
+Time.h
+/home/geek/how_to_program/Classes/Time/Time.h
+
+/home/geek/how_to_program/Classes/Time/Time.h
+
+/home/geek/how_to_program/Classes/Time/main.cpp
+iostream
+-
+Time.h
+/home/geek/how_to_program/Classes/Time/Time.h
+
