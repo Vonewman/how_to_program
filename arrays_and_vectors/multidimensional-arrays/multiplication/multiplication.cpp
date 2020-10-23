@@ -3,22 +3,33 @@
 
 using namespace std;
 
-const int rows = 100;
-const int columns = 100;
 
 int main()
 {
-	int mult[rows][columns];
+	constexpr int numRows{10};
+	constexpr int numCols{10};
 
-	for (int i = 1; i < 10; i++)
+	// Declare a 10x10 array
+	int product[numRows][numCols]{};
+
+	// Calculate a multiplication table
+	for (int row{1}; row < numRows; ++row)
 	{
-		for (int j = 1; j < 10; j++)
+		for (int col{1}; col < numCols; ++col)
 		{
-			mult[i][j] = (i)*(j);
-			cout << setw(3) << mult[i][j] << "  ";
+			product[row][col] = row * col;
 		}
-
-		cout << endl;
 	}
+
+	// Print the table
+	for (int row{1}; row < numRows; ++row)
+	{
+		for (int col{1}; col < numCols; ++col)
+		{
+			std::cout << product[row][col] << '\t';
+		}
+		std::cout << '\n';
+	}
+
 	return 0;
 }
